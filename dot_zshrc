@@ -1,0 +1,4 @@
+# vim: syntax=bash
+#
+
+source ${HOME}/.zshrc_base
