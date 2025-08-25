@@ -1,0 +1,17 @@
+# ~/.gitconfig
+[include]
+    path = .gitconfig_{{ .username }}
+
+[user]
+	name = {{ .name | quote }}
+	email = {{ .email | quote }}
+	signingkey = 7869009790BB9080
+
+[init]
+  defaultBranch = main
+
+[push]
+  followTags = true
+
+[commit]
+	gpgsign = true
