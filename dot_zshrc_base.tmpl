@@ -74,3 +74,9 @@ if [[ -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh <$TTY
+
+# Define baseline aliases
+
+alias cz="chezmoi"
+alias czb='chezmoi --source "${USER_HOME:-$HOME}/.local/share/chezmoi.base" --config ${USER_HOME:-$HOME}/.config/chezmoi/_base/chezmoi.yaml "${@}"'
+
