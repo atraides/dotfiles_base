@@ -1,11 +1,6 @@
 # ~/.gitconfig
 [include]
-    path = .gitconfig_{{ .username }}
-
-[user]
-	name = {{ .name | quote }}
-	email = {{ .email | quote }}
-	signingkey = 7869009790BB9080
+    path = .gitconfig_user
 
 [init]
   defaultBranch = main
