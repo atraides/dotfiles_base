@@ -55,8 +55,13 @@ fi
 
 source $ZSH/oh-my-zsh.sh <$TTY
 
+if [[ -e ${HOME}/.zshrc_dev ]];
+  source ${HOME}/.zshrc_dev
+fi
+
 # Define baseline aliases
 
 alias cz="chezmoi"
 alias czb='chezmoi --source "${USER_HOME:-$HOME}/.local/share/chezmoi_base" --config ${USER_HOME:-$HOME}/.config/chezmoi/_base/chezmoi.yaml "${@}"'
+alias czd='chezmoi --source "${USER_HOME:-$HOME}/.local/share/chezmoi_dev" --config ${USER_HOME:-$HOME}/.config/chezmoi/_dev/chezmoi.yaml "${@}"'
 
