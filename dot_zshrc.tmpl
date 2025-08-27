@@ -53,11 +53,15 @@ if [[ -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ]]; then
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 
-source $ZSH/oh-my-zsh.sh <$TTY
-
-if [[ -e ${HOME}/.zshrc_dev ]];
+if [[ -e ${HOME}/.zshrc_dev ]]; then
   source ${HOME}/.zshrc_dev
 fi
+
+if [[ -e ${HOME}/.zshrc_user ]]; then
+  source ${HOME}/.zshrc_user
+fi
+
+source $ZSH/oh-my-zsh.sh <$TTY
 
 # Define baseline aliases
 
