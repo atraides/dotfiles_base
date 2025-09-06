@@ -30,6 +30,10 @@ if command -v eza &>/dev/null; then
   zstyle ':omz:plugins:eza' 'time-style' long-iso
 fi
 
+if command -v zoxide &>/dev/null; then
+  plugins+=("zoxide");
+fi
+
 if command -v kubectl &>/dev/null; then
   plugins+=("kubectl");
 fi
