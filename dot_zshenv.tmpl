@@ -18,7 +18,7 @@ fi
 
 {{ if eq .chezmoi.os "darwin" -}}
 if [[ -d /opt/homebrew/bin ]]; then
-  PATH="${PATH}:/opt/homebrew/bin"
+  PATH="/opt/homebrew/bin:${PATH}"
 fi
 {{- end }}
 
