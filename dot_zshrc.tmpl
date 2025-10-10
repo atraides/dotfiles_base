@@ -18,6 +18,10 @@ if [[ (-x /usr/bin/grc || -x /usr/local/bin/grc || -x /opt/homebrew/bin/grc) && 
   plugins+=("grc");
 fi
 
+if command -v fzf &>/dev/null; then
+  plugins+=("fzf");
+fi
+
 if command -v eza &>/dev/null; then
   plugins+=("eza");
   zstyle ':omz:plugins:eza' 'dirs-first' yes
